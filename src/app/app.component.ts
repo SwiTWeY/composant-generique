@@ -1,12 +1,67 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { GenericTableComponentComponent } from './generic-table-component/generic-table-component.component';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [GenericTableComponentComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'Composantgenerique';
+  entete: string[] = ['Nom', 'Age', 'Ville'];
+  personne: any[] = [
+    { Nom: 'Alice', Age: 28, Ville: 'Paris' },
+    { Nom: 'Bob', Age: 35, Ville: 'Lyon' },
+    { Nom: 'Claire', Age: 22, Ville: 'Marseille' },
+    { Nom: 'David', Age: 40, Ville: 'Toulouse' },
+    { Nom: 'Emma', Age: 31, Ville: 'Nice' },
+    { Nom: 'Fabien', Age: 26, Ville: 'Bordeaux' },
+    { Nom: 'Giselle', Age: 45, Ville: 'Lille' },
+    { Nom: 'Hugo', Age: 29, Ville: 'Nantes' },
+    { Nom: 'Inès', Age: 33, Ville: 'Strasbourg' },
+    { Nom: 'Julien', Age: 24, Ville: 'Grenoble' },
+    { Nom: 'Karim', Age: 38, Ville: 'Rennes' },
+    { Nom: 'Laura', Age: 27, Ville: 'Dijon' },
+    { Nom: 'Marc', Age: 41, Ville: 'Reims' },
+    { Nom: 'Nina', Age: 36, Ville: 'Angers' },
+    { Nom: 'Olivier', Age: 30, Ville: 'Le Havre' },
+    { Nom: 'Pauline', Age: 25, Ville: 'Saint-Étienne' },
+    { Nom: 'Quentin', Age: 39, Ville: 'Toulon' },
+    { Nom: 'Rania', Age: 23, Ville: 'Clermont-Ferrand' },
+    { Nom: 'Samuel', Age: 42, Ville: 'Limoges' },
+    { Nom: 'Théo', Age: 37, Ville: 'Perpignan' },
+    { Nom: 'Ursula', Age: 29, Ville: 'Metz' },
+    { Nom: 'Victor', Age: 34, Ville: 'Besançon' },
+    { Nom: 'Wendy', Age: 31, Ville: 'Orléans' },
+    { Nom: 'Xavier', Age: 28, Ville: 'Mulhouse' },
+    { Nom: 'Yasmine', Age: 32, Ville: 'Rouen' },
+    { Nom: 'Zacharie', Age: 43, Ville: 'Nîmes' },
+    { Nom: 'Amélie', Age: 30, Ville: 'Avignon' },
+    { Nom: 'Benoît', Age: 35, Ville: 'Bayonne' },
+    { Nom: 'Chloé', Age: 26, Ville: 'Annecy' },
+    { Nom: 'Damien', Age: 39, Ville: 'Poitiers' },
+    { Nom: 'Élodie', Age: 27, Ville: 'Tours' },
+    { Nom: 'Félix', Age: 44, Ville: 'La Rochelle' },
+    { Nom: 'Gaëlle', Age: 21, Ville: 'Caen' },
+    { Nom: 'Henri', Age: 50, Ville: 'Ajaccio' },
+    { Nom: 'Isabelle', Age: 29, Ville: 'Colmar' },
+    { Nom: 'Jean', Age: 33, Ville: 'Pau' },
+    { Nom: 'Katia', Age: 40, Ville: 'Valence' },
+    { Nom: 'Léo', Age: 25, Ville: 'Chambéry' },
+    { Nom: 'Mélissa', Age: 38, Ville: 'Albi' },
+    { Nom: 'Nicolas', Age: 36, Ville: 'Tarbes' },
+    { Nom: 'Océane', Age: 34, Ville: 'Bastia' },
+    { Nom: 'Pierre', Age: 28, Ville: 'Narbonne' },
+    { Nom: 'Quitterie', Age: 22, Ville: 'Arles' },
+    { Nom: 'Raphaël', Age: 45, Ville: 'Béziers' },
+    { Nom: 'Sonia', Age: 31, Ville: 'Carcassonne' },
+    { Nom: 'Tom', Age: 24, Ville: 'Chartres' },
+    { Nom: 'Ugo', Age: 27, Ville: 'Montauban' },
+    { Nom: 'Violette', Age: 26, Ville: 'Brive-la-Gaillarde' },
+    { Nom: 'William', Age: 37, Ville: 'Châteauroux' },
+    { Nom: 'Zoé', Age: 23, Ville: 'Cannes' },
+  ];
 }

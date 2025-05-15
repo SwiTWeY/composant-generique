@@ -1,0 +1,42 @@
+<table *ngIf="data && data.length > 0" class="table table-hover table-bordered">
+  <thead class="table-light">
+    <tr>
+      <th
+        *ngFor="let col of colonne"
+        (click)="sortData(col)"
+        style="cursor: pointer"
+      >
+        {{ col }}
+        <span *ngIf="sortColumn === col">
+          {{ sortDirection === "asc" ? "▲" : "▼" }}
+        </span>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of paginatedData">
+      <td *ngFor="let col of colonne">
+        {{ row[col] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<nav aria-label="Pagination">
+  <ul class="pagination justify-content-center">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button class="page-link" (click)="changePage(currentPage - 1)">
+        Précédent
+      </button>
+    </li>
+    <li class="page-item disabled">
+      <span class="page-link"> Page {{ currentPage }} / {{ totalPages }} </span>
+    </li>
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button class="page-link" (click)="changePage(currentPage + 1)">
+        Suivant
+      </button>
+    </li>
+  </ul>
+</nav>
