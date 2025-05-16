@@ -15,9 +15,9 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let colonnes of paginatedData">
+    <tr *ngFor="let row of paginatedData">
       <td *ngFor="let col of colonne">
-        {{ colonnes[col] }}
+        {{ row[col] }}
       </td>
     </tr>
   </tbody>
