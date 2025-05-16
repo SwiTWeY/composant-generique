@@ -1,4 +1,4 @@
-<table *ngIf="data && data.length > 0" class="table table-hover table-bordered">
+<table *ngIf="data.length > 0" class="table table-hover table-bordered">
   <thead class="table-light">
     <tr>
       <th
@@ -15,9 +15,9 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let row of paginatedData">
+    <tr *ngFor="let colonnes of paginatedData">
       <td *ngFor="let col of colonne">
-        {{ row[col] }}
+        {{ colonnes[col] }}
       </td>
     </tr>
   </tbody>
